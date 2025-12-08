@@ -18,3 +18,20 @@ affichageTotalLivres += totalLivres;
 affichageTotalLivres+= " livres au total";
 
 console.log(affichageTotalLivres);
+
+let joueurprofessionel = {
+    Nom:	"Zinédine Yazid Zidane",
+    Nationalité:	["Française", "Algérienne"],
+    NatSportive:	"Française",
+    Naissance:	"23 juin 1972 (53 ans)",
+    villeNaissance : "Marseille (France)",
+    Taille	: 1.85 ,
+    PériodePro	: 1988-2006,
+    Poste:	"Milieu offensif",
+    PiedFort:	"Droit"
+};
+
+console.log(joueurprofessionel)
+
+console.log(joueurprofessionel.Nom)
+console.log(joueurprofessionel.Nationalité)
