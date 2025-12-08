@@ -34,7 +34,28 @@ let joueurprofessionel = {
     PiedFort:	"Droit"
 };
 
-console.log(joueurprofessionel)
+console.log(joueurprofessionel);// On affiche tout le contenu de l'objet
 
-console.log(joueurprofessionel.Nom)// On prend le nom qui se trouve dans l'objet
-console.log(joueurprofessionel.Nationalité)// On prend la nationalité qui se trouve dans l'objet
+console.log(joueurprofessionel.Nom);// On prend le nom qui se trouve dans l'objet
+console.log(joueurprofessionel.Nationalité);// On prend la nationalité qui se trouve dans l'objet
+
+
+const dateNaissance2 = new Date("07/ 31 /1978");// Initialisation d'une variable cons pour la date de naissance qu'on placera dans l'objet
+const election = new Date("06/19/2022");// Initialisation de la date d'élection
+let persoPolitique = {
+    Nom:"Estelle Youssouffa",
+    Nationalité: "Français",
+    dateNaissance2,
+    villeNaissance: "Châtenay-Malabry (France)",
+    partiPolitique: "UDI",
+    profession: "Journalise",
+    election
+
+
+};
+
+console.log(persoPolitique);// On affiche l'ensemble de l'objet
+console.log(persoPolitique.Nom);// On prend le nom qui est dans l'objet
+console.log(persoPolitique.Nationalité);// On prend la nationalité qui se trouve dans l'objet
+console.log(persoPolitique.election);// On prend la date de l'election
+console.log(persoPolitique.profession);// On prend la profession 
