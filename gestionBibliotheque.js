@@ -19,11 +19,14 @@ affichageTotalLivres+= " livres au total";
 
 console.log(affichageTotalLivres);
 
+const dateNaissance = new Date("06/23/1972");
+
 let joueurprofessionel = {
     Nom:	"Zinédine Yazid Zidane",
     Nationalité:	["Française", "Algérienne"],
     NatSportive:	"Française",
     Naissance:	"23 juin 1972 (53 ans)",
+    dateNaissance,
     villeNaissance : "Marseille (France)",
     Taille	: 1.85 ,
     PériodePro	: 1988-2006,
@@ -33,5 +36,5 @@ let joueurprofessionel = {
 
 console.log(joueurprofessionel)
 
-console.log(joueurprofessionel.Nom)
-console.log(joueurprofessionel.Nationalité)
+console.log(joueurprofessionel.Nom)// On prend le nom qui se trouve dans l'objet
+console.log(joueurprofessionel.Nationalité)// On prend la nationalité qui se trouve dans l'objet
