@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul age </title>
+    <script src="calcul_age.js"></script>
+    <link rel="stylesheet" href="calcul_age.css">
+</head>
+<body>
+    <h2>Formulaire de calcul</h2>
+    <br><br>
+    <form>
+        <!-- Crée un formulaire -->
+        
+        <div id="div1">
+            <label for="nom">Nom:</label>
+            <!-- Étiquette pour le champ nom -->
+            <input type="text" id="nom" name="nom" value="">
+            <!-- Champ de texte pour saisir le nom, avec une valeur par défaut -->
+            
+            <label for="prenom">Prénom:</label>
+            <!-- Étiquette pour le champ prénom -->
+            <input type="text" id="prenom" name="prenom" value=""><br><br>
+            <!-- Champ de texte pour saisir le prénom, avec une valeur par défaut -->
+        </div>
+        
+        <div id="div2">
+            <label for="anneeDeNaissance">Année de naissance:</label>
+            <!-- Étiquette pour le champ date -->
+            <input type="number" id="date" name="date" value="">
+            <!-- Champ de sélection de date, avec une valeur par défaut -->
+            
+
+            <!-- Label principale pour indiquer le champ de sélection du situation -->
+            <label for="situation">Situation:</label>
+            <!-- Bouton radio pour sélectionner l'option "Homme", avec un id unique et un name partagé pour grouper les options -->
+            <input type="radio" id="etudiant" name="situation" value="Etudiant">
+            <!-- Label associée au bouton radio "Etudiant" -->
+            
+            <label for="etudiant">Etudiant</label>
+            <!-- Bouton radio pour sélectionner l'option "Femme", avec un id unique et le même name pour grouper -->
+            <input type="radio" id="salarie" name="situation" value="Salarié">
+            <!-- Label associée au bouton radio "Salarié"  -->
+            <label for="salarie">Salarié</label>
+
+        </div>
+        <br><br>
+        
+
+        <div>
+            <label for="age">Vous êtes âgé de :</label>
+            <input type="number" id="a" value="">
+        </div>
+
+    
+</body>
+</html>
