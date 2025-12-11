@@ -1,31 +1,27 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+* {
+    margin: 0;                /* Supprime toutes les marges par défaut */
+    padding: 0;               /* Supprime tous les espacements internes par défaut */
+    box-sizing: border-box;   /* Permet d'inclure la padding et la bordure dans la largeur totale de l’élément */
 }
 
-
-body{
-    text-align: center;/*on prend la partie du formulaire divisé au centre de la page */ 
-    text-indent: 50px;/*j'indente de 50 pixel */ 
-    height: 50px;
-
+body {
+    text-align: center;       /* Centre tout le contenu texte dans le body */
+    text-indent: 50px;        /* Décale la première ligne de chaque paragraphe de 50px */
+    height: 50px;             /* Définit une hauteur fixe au body (⚠️ souvent inutile et peut casser la mise en page) */
 }
 
-h2{
-    text-align: center;/*on aligne le titre de niveau de au centre de la page */
+h2 {
+    text-align: center;       /* Centre le texte du titre <h2> */
 }
 
-form{
-    background-color:blanchedalmond;
+form {
+    background-color: blanchedalmond; /* Définit une couleur d’arrière-plan pour le formulaire */
 }
 
-input {/*on prend comme selecteur les input de type text*/
-    padding: 7px;/*ajoute de l'espace à l'intérieur de la balise <input>*/
-    margin: 5px;/*ajoute de l'espace en partant de la marge */
-    border: solid burlywood 2px;/*j'ajoute des bordures solide de couleur rouge de 2 pixel */
-    border-radius: 3px;/**/
-    background-color: burlywood;
+input {
+    padding: 7px;                       /* Ajoute de l’espace interne pour agrandir l’input */
+    margin: 5px;                        /* Ajoute de l’espace externe entre les inputs */
+    border: solid burlywood 2px;        /* Bordure solide de 2px, couleur burlywood (beige-brun) */
+    border-radius: 3px;                 /* Arrondit légèrement les coins des inputs */
+    background-color: burlywood;        /* Couleur de fond des champs input */
 }
-

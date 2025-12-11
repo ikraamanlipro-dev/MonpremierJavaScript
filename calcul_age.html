@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
+    <!-- Définit l'encodage en UTF-8 pour gérer les caractères spéciaux -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcul age </title>
+    <!-- Permet à la page d’être responsive sur mobile -->
+
+    <title>Calcul age</title>
+    <!-- Titre affiché dans l’onglet du navigateur -->
+
     <script src="calcul_age.js"></script>
+    <!-- Lien vers ton fichier JavaScript externe -->
+
     <link rel="stylesheet" href="calcul_age.css">
+    <!-- Lien vers ta feuille de style CSS -->
 </head>
+
 <body>
     <h2>Formulaire de calcul</h2>
+    <!-- Titre de la page -->
+
     <br><br>
+    
     <form>
-        <!-- Crée un formulaire -->
-        
+        <!-- Formulaire regroupant l'ensemble des champs -->
+
         <div id="div1">
+            <!-- Premier bloc contenant les champs Nom & Prénom -->
+
             <label for="nom">Nom:</label>
-            <!-- Étiquette pour le champ nom -->
+            <!-- Étiquette liée au champ "nom" -->
+
             <input type="text" id="nom" name="nom" value="">
-            <!-- Champ de texte pour saisir le nom, avec une valeur par défaut -->
-            
+            <!-- Champ texte dans lequel l’utilisateur écrit son nom -->
+
             <label for="prenom">Prénom:</label>
-            <!-- Étiquette pour le champ prénom -->
-            <input type="text" id="prenom" name="prenom" value=""><br><br>
-            <!-- Champ de texte pour saisir le prénom, avec une valeur par défaut -->
+            <!-- Étiquette liée au champ "prenom" -->
+
+            <input type="text" id="prenom" name="prenom" value="">
+            <!-- Champ texte pour le prénom -->
+
+            <br><br>
         </div>
-        
+
         <div id="div2">
+            <!-- Deuxième bloc : année de naissance + situation -->
+
             <label for="anneeDeNaissance">Année de naissance:</label>
-            <!-- Étiquette pour le champ date -->
-            <input type="number" id="date" name="date" value="">
-            <!-- Champ de sélection de date, avec une valeur par défaut -->
-            
+            <!-- Étiquette du champ année -->
 
-            <!-- Label principale pour indiquer le champ de sélection du situation -->
+            <input type="number" id="aaaa" name="aaaa" value="">
+            <!-- Champ numérique pour saisir l'année de naissance -->
+
             <label for="situation">Situation:</label>
-            <!-- Bouton radio pour sélectionner l'option "Homme", avec un id unique et un name partagé pour grouper les options -->
-            <input type="radio" id="etudiant" name="situation" value="Etudiant">
-            <!-- Label associée au bouton radio "Etudiant" -->
-            
-            <label for="etudiant">Etudiant</label>
-            <!-- Bouton radio pour sélectionner l'option "Femme", avec un id unique et le même name pour grouper -->
-            <input type="radio" id="salarie" name="situation" value="Salarié">
-            <!-- Label associée au bouton radio "Salarié"  -->
-            <label for="salarie">Salarié</label>
+            <!-- Titre indiquant que les options suivantes concernent la situation -->
 
+            <input type="radio" id="etudiant" name="situation" value="Etudiant">
+            <!-- Bouton radio : "Étudiant" -->
+
+            <label for="etudiant">Etudiant</label>
+            <!-- Label du bouton radio Étudiant -->
+
+            <input type="radio" id="salarie" name="situation" value="Salarié">
+            <!-- Bouton radio : "Salarié" -->
+
+            <label for="salarie">Salarié</label>
+            <!-- Label du bouton radio Salarié -->
         </div>
+
         <br><br>
-        
 
         <div>
+            <!-- Troisième bloc : affichage de l’âge -->
+
             <label for="age">Vous êtes âgé de :</label>
+            <!-- Label associé au champ d'affichage de l’âge -->
+
             <input type="number" id="a" value="">
+            <!-- Champ numérique où sera affiché ou calculé l’âge -->
         </div>
 
-    
+    </form>
 </body>
 </html>
