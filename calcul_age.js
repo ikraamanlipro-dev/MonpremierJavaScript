@@ -5,9 +5,8 @@ let ageCalcul = annee - anneeDeNaissance;
 
 console.log(ageCalcul);
 
-let anneeDeNaissance2 = 2000;
-let annee2 = 2025;
+let dateNaissance = new Date(1995); // exemple
+let today = new Date();
+let age = today.getFullYear() - dateNaissance.getFullYear();
 
-let ageCalculV2 = annee2 - anneeDeNaissance2;
-
-console.log(ageCalculV2);
+console.log("La personne à :" + age)
