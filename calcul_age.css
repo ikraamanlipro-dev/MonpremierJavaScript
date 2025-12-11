@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    text-align: center;/*on prend la partie du formulaire divisé au centre de la page */ 
+    text-indent: 50px;/*j'indente de 50 pixel */ 
+    height: 50px;
+
+}
+
+h2{
+    text-align: center;/*on aligne le titre de niveau de au centre de la page */
+}
+
+form{
+    background-color:blanchedalmond;
+}
+
+input {/*on prend comme selecteur les input de type text*/
+    padding: 7px;/*ajoute de l'espace à l'intérieur de la balise <input>*/
+    margin: 5px;/*ajoute de l'espace en partant de la marge */
+    border: solid burlywood 2px;/*j'ajoute des bordures solide de couleur rouge de 2 pixel */
+    border-radius: 3px;/**/
+    background-color: burlywood;
+}
+
