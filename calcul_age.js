@@ -1,23 +1,34 @@
-// Déclare l'année de naissance
-let anneeDeNaissance = 2000;
+document.addEventListener("DOMContentLoaded", function () {
 
-// Déclare l'année courante (ici fixée manuellement)
-let annee = 2025;
+    // Sélection des champs HTML
+    let inputAnnee = document.getElementById("aaaa"); // année de naissance
+    let inputAge = document.getElementById("a");      // âge 
 
-// Calcule l'âge en faisant simplement la différence
-let ageCalcul = annee - anneeDeNaissance;
+    // Quand l’utilisateur écrit son année de naissance
+    inputAnnee.addEventListener("input", function () {
 
-// Affiche le résultat dans la console
-console.log(ageCalcul);
+        // On récupère l'année saisie
+        let anneeDeNaissance = parseInt(inputAnnee.value);
 
-// Crée une date de naissance à partir de l'année 1995
-let dateNaissance = new Date(1995);
+        // Vérifie si c'est bien un nombre
+        if (!isNaN(anneeDeNaissance)) {
+         
+            let today = new Date();
+            let anneeActuelle = today.getFullYear();
 
-// Récupère la date actuelle
-let today = new Date();
+            // Calcul de l'âge 
+            let ageCalcul = anneeActuelle - anneeDeNaissance;
 
-// Calcule l'âge basé uniquement sur la différence des années
-let age = today.getFullYear() - dateNaissance.getFullYear();
+            // On affiche le résultat dans l'input HTML
+            inputAge.value = ageCalcul;
 
-// Affiche l'âge
-console.log("La personne a : " + age);
+            
+        } 
+        else {
+            // Si la saisie n'est pas un nombre → on efface
+            inputAge.value = "";
+        }
+
+    });
+
+});

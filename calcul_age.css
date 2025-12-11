@@ -7,7 +7,7 @@
 body {
     text-align: center;       /* Centre tout le contenu texte dans le body */
     text-indent: 50px;        /* Décale la première ligne de chaque paragraphe de 50px */
-    height: 50px;             /* Définit une hauteur fixe au body (⚠️ souvent inutile et peut casser la mise en page) */
+    height: 50px;             /* Définit une hauteur fixe au body  */
 }
 
 h2 {
@@ -21,7 +21,7 @@ form {
 input {
     padding: 7px;                       /* Ajoute de l’espace interne pour agrandir l’input */
     margin: 5px;                        /* Ajoute de l’espace externe entre les inputs */
-    border: solid burlywood 2px;        /* Bordure solide de 2px, couleur burlywood (beige-brun) */
+    border: solid burlywood 2px;        /* Bordure solide de 2px, couleur burlywood  */
     border-radius: 3px;                 /* Arrondit légèrement les coins des inputs */
     background-color: burlywood;        /* Couleur de fond des champs input */
 }
