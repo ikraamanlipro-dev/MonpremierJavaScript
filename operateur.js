@@ -78,7 +78,7 @@ let distanceParcourue = 5;
 console.log(a > distanceParcourue);
 console.log(a < distanceParcourue);
 
-console.log(a <= distanceParcourue);
+console.log(a = distanceParcourue);
 
 console.log(vill != commu);// On veut vérifier si la commune est différente du village
 console.log(commu !== commu);// On veut vérifier si la commune est strictement différente du village 

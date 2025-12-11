@@ -53,19 +53,20 @@ let text2 = "";
 /*La boucle while s'execute comme la boucle for mais s'arrête dès que la 
 * condition est remplie
 */
-let i = 0;
-while (i <= 30) {
-  text2 += "On est à " + i + " " ;
-  i++;
+/*
+let u = 0;
+while (u <= 30) {
+  text2 += "On est à " + u + " " ;
+  u++;
 };
 
 console.log(text2);
 
-/*
+
 let compteRebour = 30;
-while(i >= 0){
-    compteRebour -= i +" ";
-    i++;
+while(a >= 0){
+    compteRebour -= a +" ";
+    a++;
 };
 
 console.log(compteRebour)*/
