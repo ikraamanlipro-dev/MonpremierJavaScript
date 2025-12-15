@@ -1,34 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // Sélection des champs HTML
-    let inputAnnee = document.getElementById("aaaa"); // année de naissance
-    let inputAge = document.getElementById("a");      // âge 
+    let inputNom = document.getElementById("nom");           // champ nom
+    let inputPrenom = document.getElementById("prenom");     // champ prénom
+    let inputAnnee = document.getElementById("annee");        // champ année de naissance
+    let inputAge = document.getElementById("age");             // champ âge
+    let boutonValider = document.getElementById("valider");  // bouton "Valider"
 
-    // Quand l’utilisateur écrit son année de naissance
-    inputAnnee.addEventListener("input", function () {
-
-        // On récupère l'année saisie
+    // Fonction pour calculer l'âge en fonction de l'année de naissance
+    function calculerAge() {
         let anneeDeNaissance = parseInt(inputAnnee.value);
 
-        // Vérifie si c'est bien un nombre
+        // Vérifie si l'année de naissance est un nombre
         if (!isNaN(anneeDeNaissance)) {
-         
             let today = new Date();
             let anneeActuelle = today.getFullYear();
 
-            // Calcul de l'âge 
+            // Calcul de l'âge
             let ageCalcul = anneeActuelle - anneeDeNaissance;
 
-            // On affiche le résultat dans l'input HTML
+            // Affichage de l'âge dans l'input "age"
             inputAge.value = ageCalcul;
-
-            
-        } 
-        else {
-            // Si la saisie n'est pas un nombre → on efface
+        } else {
+            // Si l'année de naissance n'est pas valide
             inputAge.value = "";
         }
+    }
 
+    // Quand l’utilisateur écrit dans le champ "année de naissance", on calcule l'âge
+    inputAnnee.addEventListener("input", function () {
+        calculerAge();
+    });
+
+    // Quand l’utilisateur clique sur le bouton "Valider"
+    boutonValider.addEventListener("click", function (event) {
+        event.preventDefault(); // Empêche le rechargement de la page (comportement par défaut du submit)
+
+        // Récupération des valeurs saisies
+        let nom = inputNom.value;
+        let prenom = inputPrenom.value;
+        let anneeDeNaissance = parseInt(inputAnnee.value);
+
+        // Vérifie si l'année de naissance est valide
+        if (!isNaN(anneeDeNaissance)) {
+            // Affichage des informations dans la console 
+            console.log(`Nom : ${nom}`);
+            console.log(`Prénom : ${prenom}`);
+            console.log(`Année de naissance : ${anneeDeNaissance}`);
+            console.log(`Âge : ${inputAge.value}`);
+
+            // Affichage des informations dans un message popup
+            alert(`Vous avez  ${inputAge.value} ans`);
+        } else {
+            alert("Veuillez entrer une année de naissance valide !");
+        }
     });
 
 });
