@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let inputPrenom = document.getElementById("prenom");     // champ prénom
     let inputAnnee = document.getElementById("annee");        // champ année de naissance
     let inputAge = document.getElementById("age");             // champ âge
-    let boutonValider = document.getElementById("valider");  // bouton "Valider"
+    let boutonValider = document.getElementById("boutonValider");  // bouton "Valider"
 
     // Fonction pour calculer l'âge en fonction de l'année de naissance
     function calculerAge() {
@@ -53,6 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
             alert(`Vous avez  ${inputAge.value} ans`);
         } else {
             alert("Veuillez entrer une année de naissance valide !");
+        }
+        // Règles mineur / majeur
+        if ( inputAge.value <= 18) {
+            alert(`${nom} ${prenom}, vous êtes mineur.`);
+        } else {
+            alert(`${nom} ${prenom}, vous êtes majeur.`);
         }
     });
 
