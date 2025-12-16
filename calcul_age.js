@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
     let inputAnnee = document.getElementById("annee");        // champ année de naissance
     let inputAge = document.getElementById("age");             // champ âge
     let boutonValider = document.getElementById("boutonValider");  // bouton "Valider"
+    let elementListCommunes = document.getElementById("listesCommune"); // champ liste des communes
+
+    let elementClassCommune = document.getElementsByClassName("commune");
+    console.log(elementClassCommune)
+
+    console.log(elementListCommunes);// affichage de la liste des communes 
+
+    let text = "";// variable text vide pour stocker les éléments à venir
+    for (let i = 0; i < elementClassCommune.length; i++) {
+        text += elementClassCommune[i].textContent + " " ;
+    };
+    console.log(text);
 
     // Fonction pour calculer l'âge en fonction de l'année de naissance
     function calculerAge() {
