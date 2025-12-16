@@ -32,6 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let elementSection2 = document.createElement('section2');
     elementBody.appendChild(elementSection2);
+    
+    let nouveauTitre2 = document.createElement("h3");
+    nouveauTitre2.textContent = "Bonjour"
+    elementSection2.appendChild(nouveauTitre2);
+
+    
+    /*document.getElementById("image").src = "images.jpg"*/
+    /*
+    let elementImage = document.createElement('img');
+    elementImage.src = 'images.jpg';
+    elementImage.setAttribute("alt","Mon écureuil");
+    elementImage.className = "image écureuil";
+    elementImage.classList.add("image","image3");*/
 
     // Fonction pour calculer l'âge en fonction de l'année de naissance
     function calculerAge() {
