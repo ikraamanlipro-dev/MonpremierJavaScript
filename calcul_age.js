@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Veuillez entrer une année de naissance valide !");
         }
         // Règles mineur / majeur
-        if ( inputAge.value <= 18) {
+        if ( inputAge.value < 18) {
             alert(`${nom} ${prenom}, vous êtes mineur.`);
         } else {
             alert(`${nom} ${prenom}, vous êtes majeur.`);
