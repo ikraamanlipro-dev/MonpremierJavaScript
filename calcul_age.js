@@ -19,6 +19,20 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     console.log(text);
 
+    
+    let elementSection = document.createElement("Section");
+    let elementBody = document.querySelector('body');
+
+    elementBody.appendChild(elementSection);
+
+    let nouveauTitre = document.createElement("h3");
+    nouveauTitre.textContent = "Mon titre de la section"
+    elementSection.appendChild(nouveauTitre);
+
+
+    let elementSection2 = document.createElement('section2');
+    elementBody.appendChild(elementSection2);
+
     // Fonction pour calculer l'âge en fonction de l'année de naissance
     function calculerAge() {
         let anneeDeNaissance = parseInt(inputAnnee.value);
