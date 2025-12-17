@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     elementImage.className = "image écureuil";
     elementImage.classList.add("image","image3");*/
 
-    
+    /*
     let elementSpanDateDuJour = document.querySelector("#dateDuJour");
     let elementSpanDateDuJourFormat2 = document.querySelector("#DateDuJourFormat2")
     
@@ -56,13 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
     elementBoutonValiderDate.addEventListener("click",function() {
         console.log("### Je suis dans le bouton valider date .")
 
-        elementSpanDateDuJour.innerHTML = maDate();
-        elementSpanDateDuJourFormat2.textContent = maDate.toLocaleDateString();
+        elementSpanDateDuJour.innerHTML = maDate;
+        elementSpanDateDuJourFormat2.textContent = maDate.toLocaleDateString(); 
         
-    });
+    });*/
 
+    let elementBoutonFleche = document.querySelector("#boutonFleche");
+    elementBoutonFleche.addEventListener("keydown",(event) => {
+        console.log("Je suis dans l'événement keydown");
+        console.log("clé event ", event.key);
+    });
     // Fonction pour calculer l'âge en fonction de l'année de naissance
     function calculerAge() {
+    
         let anneeDeNaissance = parseInt(inputAnnee.value);
 
         // Vérifie si l'année de naissance est un nombre
