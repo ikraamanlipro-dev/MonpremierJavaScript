@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (radioSalarie.checked) {
             situationTexte.textContent = "Votre situation : Salarié";
         } else {
-            situationTexte.textContent = "Votre situation : Non spécifiée";
+            situationTexte.textContent = "Votre situation : Non définie";
         }
     }
 
@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Affichage des informations dans la console
             console.log(`Nom : ${nom}`);
             console.log(`Prénom : ${prenom}`);
+            console.log(`${situationTexte.textContent}`);
             console.log(`Année de naissance : ${anneeDeNaissance}`);
             console.log(`Âge : ${inputAge.value}`);
 
