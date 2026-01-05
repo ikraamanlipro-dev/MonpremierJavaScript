@@ -122,8 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Quand l’utilisateur clique sur le bouton "Valider"
     boutonValider.addEventListener("click", function (event) {
-        event.preventDefault(); // Empêche le rechargement de la page par défaut
-
+        event.preventDefault(); // Empêche le rechargement de la page par défaut ( empêcher le comportement par défaut d’un événement )
         // Récupération des valeurs saisies par l'utilisateur
         let nom = inputNom.value;
         let prenom = inputPrenom.value;
