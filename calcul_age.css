@@ -1,7 +1,18 @@
+:root {
+    --main-bg: #fff8e1;
+    --accent: #deb887;
+    --accent-dark: #cdaa7d;
+    --input-bg: #f5deb3;
+    --input-border: #deb887;
+    --text-main: #5a3e1b;
+    --text-accent: #7c5a2a;
+    --link: #a0522d;
+}
+
 * {
-    margin: 0;                /* Supprime toutes les marges par défaut */
-    padding: 0;               /* Supprime tous les espacements internes par défaut */
-    box-sizing: border-box;   /* Permet d'inclure la padding et la bordure dans la largeur totale de l’élément */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -24,4 +35,96 @@ input {
     border: solid burlywood 2px;        /* Bordure solide de 2px, couleur burlywood  */
     border-radius: 3px;                 /* Arrondit légèrement les coins des inputs */
     background-color: burlywood;        /* Couleur de fond des champs input */
+}
+
+label {
+    font-weight: bold;
+    margin-right: 8px;
+    color: #5a3e1b;
+}
+
+.personne, .anneeNaissance, .situation, .messageAffiche, .boutonValider {
+    margin-bottom: 18px;
+}
+
+#situationAffichee {
+    margin: 12px 0;
+    font-style: italic;
+    color: #7c5a2a;
+}
+
+#age {
+    width: 80px;
+    background-color: #f5deb3;
+    color: #5a3e1b;
+    font-weight: bold;
+}
+
+.boutonValider input[type="button"] {
+    background-color: #deb887;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.boutonValider input[type="button"]:hover {
+    background-color: #cdaa7d;
+}
+
+.date button, #fonctionFleche button {
+    background-color: #deb887;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+}
+
+.date button:hover, #fonctionFleche button:hover {
+    background-color: #cdaa7d;
+}
+
+#dateDuJour, #dateDuJourformat2 {
+    color: #7c5a2a;
+    font-weight: bold;
+}
+
+ol#listesCommunes {
+    display: inline-block;
+    text-align: left;
+    background: #fff8e1;
+    padding: 18px 30px;
+    border-radius: 8px;
+    border: 1px solid #deb887;
+    margin-top: 18px;
+}
+
+li.commune {
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+    color: #5a3e1b;
+}
+
+footer {
+    background: #f5deb3;
+    color: #5a3e1b;
+    padding: 18px 0;
+    margin-top: 30px;
+    font-size: 0.95rem;
+}
+
+a {
+    color: #a0522d;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #7c5a2a;
 }
