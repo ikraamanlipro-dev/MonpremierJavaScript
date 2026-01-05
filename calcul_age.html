@@ -17,59 +17,69 @@
 
         <!-- En-tête -->
         <header>
+            <h1> Jeu de calcul automatique de l'âge </h1>
+            <br>
+            
+            <h2> L'application le plus fiable pour connaître votre âge.</h2>
+            <br>
+
+            <h3> Vous serez heureux d'apprendre votre âge.</h3>
+            
+            <br></br>
+            
             <h2>Formulaire de calcul</h2>
         </header>
 
         <!-- Section principale-->
         <section>
-                
-            <h3 id="commune">Communes de Mayotte</h3>
-
-            
-            <ol id="listesCommunes">
-                <li class="commune">Koungou</li>
-                <li class="commune">Dzaoudzi</li>
-                <li class="commune">Bouéni</li>
-                <li class="commune">Chiconi</li>
-                <li class="commune">Tsingoni</li>
-                <li class="commune">Mamoudzou</li>
-                <li class="commune">Ouangani</li>
-                <li class="commune">Sada</li>
-                <li class="commune">Bandraboua</li>
-                <li class="commune">Mtsamboro</li>
-                <li class="commune">Acoua</li>
-                <li class="commune">Dembéni</li>
-                <li class="commune">Kani-Keli</li>
-                <li class="commune">Chirongui</li>
-                <li class="commune">Mtsangamouji</li>
-                <li class="commune">Bandrele</li>
-            </ol>
 
             <article>
 
                 <form>
 
-                    <div id="div1">
-                        <label for="nom">Nom :</label>
-                        <input type="text" id="nom" name="nom">
+                    <div class="personne">
 
-                        <label for="prenom">Prénom :</label>
-                        <input type="text" id="prenom" name="prenom">
+                        <br><br>
+
+                        <p>
+                            " Veuillez saisir votre nom et prénom ."
+                        </p>
+
+                        <br>
+                        
+                        <div class="identite">
+                            
+                            <div id="div1">
+                                <label for="nom">Nom :</label>
+                                <input type="text" id="nom" name="nom">
+
+                                <label for="prenom">Prénom :</label>
+                                <input type="text" id="prenom" name="prenom">
+                            </div>
+                        
+                        </div>    
+                    
                     </div>
-
+                    
                     <br>
 
                     <div id="situationAffichee">
+                        
                         <p id="situationTexte">
                             Votre situation : Non définie
                         </p>
+                    
                     </div>
 
-
-                    <div id="div">
-                        <label for="annee">Année de naissance :</label>
-                        <input type="number" id="annee" name="annee">
-
+                    <div class="anneeNaissance">
+                        <div id="div">
+                            <label for="annee">Année de naissance :</label>
+                            <input type="number" id="annee" name="annee">
+                        </div>
+                    </div>
+                        
+                    
+                    <div class="situation">
                         <label>Situation :</label>
 
                         <input type="radio" id="etudiant" name="situation" value="Etudiant">
@@ -81,17 +91,21 @@
 
                     <br>
 
-                    <div>
-                        <label for="age">Vous êtes âgé de :</label>
-                        <input type="number" id="age" readonly>
-                    </div>
-
+                    <div class="messageAffiche">
+                        <div>
+                            <label for="age">Vous êtes âgé de :</label>
+                            <input type="number" id="age" readonly>
+                        </div>
+                    </div>    
+                    
                     <br>
 
-                    <div>
-                        <input id="boutonValider" type="button" value="Valider">
+                    <div class="boutonValider">
+                        <div>
+                            <input id="boutonValider" type="button" value="Valider">
+                        </div>
                     </div>
-                    
+                
                 </form>
 
             </article>
@@ -117,14 +131,45 @@
                     <button id="boutonFleche">Fonction fléchée</button>
 
                 </div>
+
+                <br><br>
             </article>
+
+            <h3 id="commune">Communes de Mayotte</h3>
+
+            
+            <ol id="listesCommunes">
+                <li class="commune">Koungou</li>
+                <li class="commune">Dzaoudzi</li>
+                <li class="commune">Bouéni</li>
+                <li class="commune">Chiconi</li>
+                <li class="commune">Tsingoni</li>
+                <li class="commune">Mamoudzou</li>
+                <li class="commune">Ouangani</li>
+                <li class="commune">Sada</li>
+                <li class="commune">Bandraboua</li>
+                <li class="commune">Mtsamboro</li>
+                <li class="commune">Acoua</li>
+                <li class="commune">Dembéni</li>
+                <li class="commune">Kani-Keli</li>
+                <li class="commune">Chirongui</li>
+                <li class="commune">Mtsangamouji</li>
+                <li class="commune">Bandrele</li>
+            </ol>
+        
         </section>
             <br><br>
         <!-- <img src="images.jpg"  id="image"> <br><br> -->
 
         <!-- pied de page -->
         <footer>
-            <p> - Calcul dâge  -</p>
+            <p> Le site est développé par Anli dans le cadre de la formation Développeur Web et Web Mobile organisée par Ndovoo et <a href="https://www.intercariforef.org/carif-oref/reunion-prospective-competences" >CARIF-OREF 976</a>.</p>
+            
+            <br>
+
+            <p>
+                Tous droits réservés 2024
+            </p>
         </footer>
 
     </body>
