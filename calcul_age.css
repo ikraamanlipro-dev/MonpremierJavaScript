@@ -7,6 +7,10 @@
     --text-main: #5a3e1b;
     --text-accent: #7c5a2a;
     --link: #a0522d;
+    --success: #8bc34a;
+    --warning: #ff9800;
+    --error: #e74c3c;
+    --light-bg: #fef5e7;
 }
 
 * {
@@ -16,25 +20,42 @@
 }
 
 body {
-    text-align: center;       /* Centre tout le contenu texte dans le body */
-    text-indent: 50px;        /* Décale la première ligne de chaque paragraphe de 50px */
-    height: 50px;             /* Définit une hauteur fixe au body  */
+    text-align: center;
+    text-indent: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #fff8e1 0%, #fef5e7 100%);
 }
 
 h2 {
-    text-align: center;       /* Centre le texte du titre <h2> */
+    text-align: center;
+    color: #5a3e1b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 form {
-    background-color: blanchedalmond; /* Définit une couleur d’arrière-plan pour le formulaire */
+    background: linear-gradient(to bottom, #fff8e1, #fef5e7);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px auto;
+    width: 75%;
+    border-left: 4px solid #deb887;
+    box-shadow: 0 2px 8px rgba(90, 62, 27, 0.1);
 }
 
 input {
-    padding: 7px;                       /* Ajoute de l’espace interne pour agrandir l’input */
-    margin: 5px;                        /* Ajoute de l’espace externe entre les inputs */
-    border: solid burlywood 2px;        /* Bordure solide de 2px, couleur burlywood  */
-    border-radius: 3px;                 /* Arrondit légèrement les coins des inputs */
-    background-color: burlywood;        /* Couleur de fond des champs input */
+    padding: 7px;
+    margin: 5px;
+    border: solid #cdaa7d 2px;
+    border-radius: 3px;
+    background-color: #f5deb3;
+    color: #5a3e1b;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #a0522d;
+    background-color: #fef5e7;
 }
 
 label {
@@ -51,6 +72,9 @@ label {
     margin: 12px 0;
     font-style: italic;
     color: #7c5a2a;
+    padding: 8px;
+    background-color: #fef5e7;
+    border-radius: 4px;
 }
 
 #age {
@@ -58,25 +82,29 @@ label {
     background-color: #f5deb3;
     color: #5a3e1b;
     font-weight: bold;
+    border: 2px solid #deb887;
 }
 
 .boutonValider input[type="button"] {
-    background-color: #deb887;
+    background: linear-gradient(135deg, #deb887, #cdaa7d);
     color: #fff;
     border: none;
     padding: 10px 22px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background 0.2s;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .boutonValider input[type="button"]:hover {
-    background-color: #cdaa7d;
+    background: linear-gradient(135deg, #cdaa7d, #a0522d);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .date button, #fonctionFleche button {
-    background-color: #deb887;
+    background: linear-gradient(135deg, #deb887, #cdaa7d);
     color: #fff;
     border: none;
     padding: 8px 18px;
@@ -84,45 +112,55 @@ label {
     cursor: pointer;
     font-size: 1rem;
     margin-bottom: 8px;
-    transition: background 0.2s;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .date button:hover, #fonctionFleche button:hover {
-    background-color: #cdaa7d;
+    background: linear-gradient(135deg, #cdaa7d, #a0522d);
+    transform: translateY(-2px);
 }
 
 #dateDuJour, #dateDuJourformat2 {
     color: #7c5a2a;
     font-weight: bold;
+    background-color: #fef5e7;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
 ol#listesCommunes {
     display: inline-block;
     text-align: left;
-    background: #fff8e1;
+    background: linear-gradient(to bottom, #fff8e1, #fef5e7);
     padding: 18px 30px;
     border-radius: 8px;
-    border: 1px solid #deb887;
+    border-left: 3px solid #deb887;
     margin-top: 18px;
+    box-shadow: 0 2px 8px rgba(90, 62, 27, 0.1);
 }
 
 li.commune {
     margin-bottom: 6px;
     font-size: 1.05rem;
     color: #5a3e1b;
+    padding: 4px;
+    border-bottom: 1px solid #f5deb3;
 }
 
 footer {
-    background: #f5deb3;
+    background: linear-gradient(to right, #f5deb3, #fef5e7);
     color: #5a3e1b;
     padding: 18px 0;
     margin-top: 30px;
     font-size: 0.95rem;
+    border-top: 2px solid #deb887;
 }
 
 a {
     color: #a0522d;
     text-decoration: underline;
+    transition: color 0.3s;
 }
 
 a:hover {
