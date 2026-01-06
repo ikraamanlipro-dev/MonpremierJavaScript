@@ -1,42 +1,45 @@
-/* date.css - mis à jour pour correspondre au HTML/JS fournis */
+/* Variables */
 :root{
     --gap: 12px;
     --box-bg: #f5f7fb;
+    --bg: #eef2f7;
     --accent: #2b7cff;         /* locale */
     --accent-paris: #1e3a8a;   /* Paris */
     --accent-tokyo: #9b5de5;   /* Tokyo */
     --muted: #6b7280;
-    --radius: 8px;
+    --radius: 10px;
     --pad: 14px;
+    --shadow-sm: 0 2px 6px rgba(11,22,40,0.04);
+    --shadow-lg: 0 8px 20px rgba(11,22,40,0.08);
+    --max-width: 720px;
 }
 
+/* Réinitialisation minimale */
 *{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+
+/* Mise en page */
 body{
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    background:#eef2f7;
-    color:#111827;
+    font-family:"Segoe UI", Roboto, Arial, sans-serif;
+    background:var(--bg);
+    color:#0f1724;
     padding:32px;
     display:flex;
     flex-direction:column;
     gap:20px;
     align-items:center;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
+/* Titre */
 h1{
-    font-size:1.8rem;
-    margin-bottom:8px;
+    font-size:1.6rem;
+    margin-bottom:4px;
     color:var(--accent);
 }
 
-p{
-    font-size:1rem;
-    color:#4b5563;
-    text-align:center;
-    max-width:600px;
-    line-height:1.5;
-}
-
-/* Containers */
+/* Conteneurs partagés pour les blocs date/heure */
 .date, .time{
     display:flex;
     gap:var(--gap);
@@ -44,10 +47,10 @@ p{
     justify-content:center;
     align-items:center;
     width:100%;
-    max-width:720px;
+    max-width:var(--max-width);
 }
 
-/* Blocks individuels */
+/* Style de chaque bloc individuel */
 .date > div, .time > div{
     background:var(--box-bg);
     border:1px solid rgba(16,24,40,0.06);
@@ -55,24 +58,26 @@ p{
     min-width:120px;
     flex:1 1 120px;
     border-radius:var(--radius);
-    box-shadow:0 2px 6px rgba(11,22,40,0.04);
+    box-shadow:var(--shadow-sm);
     text-align:center;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    transition:transform .12s ease, box-shadow .12s ease;
 }
 
-/* Nombre principal */
+/* Nombres principaux */
 .date span, .time span{
     display:block;
     font-weight:700;
     font-size:1.6rem;
     color:var(--accent);
     line-height:1;
+    letter-spacing:0.2px;
 }
 
-/* Label secondaire (si utilisé) */
+/* Libellé secondaire si présent */
 .date > div span + small, .time > div span + small{
     display:block;
     margin-top:6px;
@@ -81,7 +86,13 @@ p{
     font-size:0.85rem;
 }
 
-/* Variations de couleur par ID (conserve l'existant) */
+/* Légère élévation au survol des blocs */
+.date > div:hover, .time > div:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-lg);
+}
+
+/* Dégradés subtils pour différencier les colonnes (léger) */
 #dateAnnee{background:linear-gradient(180deg,#ffffff,#f0f6ff)}
 #dateMois{background:linear-gradient(180deg,#ffffff,#fff8f0)}
 #dateJour{background:linear-gradient(180deg,#ffffff,#f7fff3)}
@@ -89,53 +100,67 @@ p{
 #timeMinute{background:linear-gradient(180deg,#ffffff,#fff9f9)}
 #timeSeconde{background:linear-gradient(180deg,#ffffff,#f0fff8)}
 
-/* Sections cliquables pour Paris et Tokyo */
+/* Sections villes */
 .paris, .tokyo{
     width:100%;
-    max-width:720px;
-    padding:10px;
+    max-width:var(--max-width);
+    padding:12px;
     border-radius:var(--radius);
     transition:transform .15s ease, box-shadow .15s ease;
-    cursor:pointer;
+    cursor:default; /* ne pas suggérer clic si non interactif */
     display:flex;
     flex-direction:column;
     gap:10px;
     align-items:center;
+    background:transparent;
 }
 
-/* Hover/active pour retour visuel */
+/* Survol pour regrouper visuellement */
 .paris:hover, .tokyo:hover{
     transform:translateY(-4px);
-    box-shadow:0 8px 20px rgba(11,22,40,0.08);
+    box-shadow:var(--shadow-lg);
 }
 
-/* Accent couleurs pour les spans à l'intérieur des sections */
+/* Couleurs d'accent dans chaque section ville */
 .paris .date span,
-.paris .time span{
-    color:var(--accent-paris);
-}
+.paris .time span{ color:var(--accent-paris); }
 
 .tokyo .date span,
-.tokyo .time span{
-    color:var(--accent-tokyo);
-}
+.tokyo .time span{ color:var(--accent-tokyo); }
 
-/* Si on veut différencier les blocs de date/time dans les sections */
+/* Garder les blocs internes subtils */
 .paris .date > div, .paris .time > div,
 .tokyo .date > div, .tokyo .time > div{
     border-color: rgba(16,24,40,0.04);
 }
 
-/* Texte des titres (p) dans les blocs ville */
+/* Style du titre de la ville */
 .paris > p, .tokyo > p{
     margin:0;
-    font-size:1.1rem;
+    font-size:1.05rem;
     color:#374151;
-    font-family:inherit;
+    font-weight:600;
+    width:100%;
+    text-align:left;
+    padding-left:6px;
 }
 
-/* Petit ajustement responsive */
+/* Ajustements responsives */
 @media (max-width:420px){
     .date > div, .time > div{min-width:100px; padding:10px}
     .date span, .time span{font-size:1.2rem}
+    body{padding:18px}
+}
+
+/* Support du mode sombre */
+@media (prefers-color-scheme: dark){
+    :root{
+        --box-bg: #0b1220;
+        --bg: #06070a;
+        --muted: #9aa3b2;
+        --shadow-sm: 0 2px 8px rgba(0,0,0,0.6);
+        --shadow-lg: 0 10px 30px rgba(0,0,0,0.7);
+    }
+    body{color:#e6eef8}
+    .date > div, .time > div{border-color: rgba(255,255,255,0.04)}
 }
