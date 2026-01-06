@@ -1,0 +1,88 @@
+/* date.css */
+:root{
+    --gap: 12px;
+    --box-bg: #f5f7fb;
+    --accent: #2b7cff;
+    --muted: #6b7280;
+    --radius: 8px;
+    --pad: 14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background:#eef2f7;
+    color:#111827;
+    padding:32px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    align-items:center;
+}
+
+/* Container for date and time groups */
+.date, .time{
+    display:flex;
+    gap:var(--gap);
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    max-width:720px;
+}
+
+/* Individual blocks inside .date and .time */
+.date > div, .time > div{
+    background:var(--box-bg);
+    border:1px solid rgba(16,24,40,0.06);
+    padding:var(--pad);
+    min-width:120px;
+    flex:1 1 120px;
+    border-radius:var(--radius);
+    box-shadow:0 2px 6px rgba(11,22,40,0.04);
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Larger number styling */
+.date span, .time span{
+    display:block;
+    font-weight:700;
+    font-size:1.6rem;
+    color:var(--accent);
+    line-height:1;
+}
+
+/* Smaller label if needed */
+.date > div span + small, .time > div span + small{
+    display:block;
+    margin-top:6px;
+    color:var(--muted);
+    font-weight:600;
+    font-size:0.85rem;
+}
+
+/* Optional color variations */
+#dateAnnee{background:linear-gradient(180deg,#ffffff,#f0f6ff)}
+#dateMois{background:linear-gradient(180deg,#ffffff,#fff8f0)}
+#dateJour{background:linear-gradient(180deg,#ffffff,#f7fff3)}
+#timeHeure{background:linear-gradient(180deg,#ffffff,#f8f6ff)}
+#timeMinute{background:linear-gradient(180deg,#ffffff,#fff9f9)}
+#timeSeconde{background:linear-gradient(180deg,#ffffff,#f0fff8)}
+
+p{
+    margin-top:20px;
+    font-size:30px;
+    color:#967;
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* Responsive tweaks */
+@media (max-width:420px){
+    .date > div, .time > div{min-width:100px; padding:10px}
+    .date span, .time span{font-size:1.2rem}
+}
