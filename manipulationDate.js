@@ -21,11 +21,41 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("secondeValue").textContent = seconde;
 
         // Affichage de la date complète dans la console (utile pour le débogage)
-        console.log(`Date complète : ${annee}-${mois}-${jour} ${heure}h${minute}m${seconde}s`);
+        //console.log(`Date complète : ${annee}-${mois}-${jour} ${heure}h${minute}m${seconde}s`);
     }
 
     // Appel initial pour afficher immédiatement la date/heure au chargement
     updateDateTime();
     // Mise à jour répétée toutes les secondes
     setInterval(updateDateTime, 1000);
+
+    function updateParisDateTime() {
+        const now = new Date();
+        const adjusted = new Date(now.getTime() - 2 * 60 * 60 * 1000); // ajoute 2 heures
+        const fmt = new Intl.DateTimeFormat('fr-FR', {
+            timeZone: 'Europe/Paris',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        const parts = fmt.formatToParts(adjusted).reduce((acc, p) => {
+            if (p.type !== 'literal') acc[p.type] = p.value;
+            return acc;
+        }, {});
+        document.getElementById("anneeParis").textContent = parts.year;
+        document.getElementById("moisParis").textContent = parts.month;
+        document.getElementById("jourParis").textContent = parts.day;
+        document.getElementById("heureParis").textContent = parts.hour;
+        document.getElementById("minuteParis").textContent = parts.minute;
+        document.getElementById("secondeParis").textContent = parts.second;
+    }
+
+    updateParisDateTime();
+    setInterval(updateParisDateTime, 1000);
+
+    
 });
