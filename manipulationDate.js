@@ -54,8 +54,38 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("secondeParis").textContent = parts.second;
     }
 
-    updateParisDateTime();
+    updateDateTime();
     setInterval(updateParisDateTime, 1000);
+
+    function updateTokyoDateTime() {
+        const now = new Date();
+        const adjusted = new Date(now.getTime() + 9 * 60 * 60 * 1000); // ajoute 9 heures
+        const fmt = new Intl.DateTimeFormat('fr-FR', {
+            timeZone: 'Asia/Tokyo',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        const parts = fmt.formatToParts(adjusted).reduce((acc, p) => {
+            if (p.type !== 'literal') acc[p.type] = p.value;
+            return acc;
+        }, {});
+        document.getElementById("anneeParis").textContent = parts.year;
+        document.getElementById("moisParis").textContent = parts.month;
+        document.getElementById("jourParis").textContent = parts.day;
+        document.getElementById("heureParis").textContent = parts.hour;
+        document.getElementById("minuteParis").textContent = parts.minute;
+        document.getElementById("secondeParis").textContent = parts.second;
+    }
+
+    updateTokyoDateTime();
+    setInterval(updateTokyoDateTime, 1000);
 
     
 });
+
+    
